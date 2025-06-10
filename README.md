@@ -96,31 +96,6 @@ set_context({
 })
 ```
 
-## Usage Examples
-
-### Basic Security Setup
-
-```javascript
-// Create a comprehensive security rule blocking common attacks
-create_site_rule({
-  type: "request",
-  enabled: true,
-  groupOperator: "all", 
-  conditions: [{
-    type: "multival",
-    field: "signal",
-    operator: "exists",
-    conditions: [
-      { type: "single", field: "signalType", value: "SQLI", operator: "equals" },
-      { type: "single", field: "signalType", value: "XSS", operator: "equals" },
-      { type: "single", field: "signalType", value: "CMDEXE", operator: "equals" }
-    ],
-    groupOperator: "any"
-  }],
-  actions: [{ type: "block" }],
-  reason: "Block common OWASP attacks"
-})
-```
 
 ### AI-Powered Interactions
 
@@ -132,43 +107,6 @@ create_site_rule({
 3. Generate appropriate rule conditions
 4. Apply the rule to your configured site
 
-### Advanced Analytics
-
-```javascript
-// Get top attack patterns from last 7 days
-get_analytics({
-  type: "top_attacks",
-  from: Math.floor(Date.now()/1000) - (7*24*60*60),
-  until: Math.floor(Date.now()/1000),
-  groupBy: "remoteIP",
-  limit: 10
-})
-
-// Monitor recent security events
-list_events({
-  from: Math.floor(Date.now()/1000) - (24*60*60), // Last 24 hours
-  action: "flagged"
-})
-```
-
-### IP Management
-
-```javascript
-// Add IP to allowlist
-manage_whitelist({
-  action: "add",
-  ip: "192.168.1.100",
-  note: "Office network",
-  expires: "2024-12-31T23:59:59Z"
-})
-
-// Block suspicious IP
-manage_blacklist({
-  action: "add", 
-  ip: "1.2.3.4",
-  note: "Detected malicious activity"
-})
-```
 
 ## Available Tools
 
@@ -233,15 +171,7 @@ manage_blacklist({
 
 The server exposes the complete Fastly NGWAF API through intuitive MCP tools. Each tool maps to specific API endpoints while handling authentication, context resolution, and error management automatically.
 
-### Response Format
-All tools return JSON responses with consistent error handling:
-```json
-{
-  "success": true,
-  "data": { ... },
-  "error": null
-}
-```
+
 
 ### Rate Limiting
 The server respects Fastly API rate limits and implements appropriate retry logic.
