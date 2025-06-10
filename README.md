@@ -1,0 +1,2 @@
+# FastlyMCP
+MCP Server
