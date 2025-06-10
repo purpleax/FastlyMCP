@@ -2,6 +2,10 @@
 
 A comprehensive Model Context Protocol (MCP) server that provides seamless integration with the Fastly NGWAF (Next-Gen Web Application Firewall) API. This server enables AI assistants like Claude to manage web application security through natural language interactions.
 
+<a href="https://glama.ai/mcp/servers/@purpleax/FastlyMCP">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@purpleax/FastlyMCP/badge" alt="Fastly NGWAF Server MCP server" />
+</a>
+
 ## Features
 
 🛡️ **Complete WAF Management**
