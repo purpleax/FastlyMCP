@@ -78,24 +78,6 @@ Add this to your Claude Desktop configuration file:
 }
 ```
 
-### Manual Authentication
-
-If not using environment variables, authenticate within your AI session:
-
-```javascript
-// Set credentials
-set_credentials({
-  email: "your-email@example.com",
-  token: "your-api-token"
-})
-
-// Set default context
-set_context({
-  corpName: "your-corporation",
-  siteName: "your-site"
-})
-```
-
 
 ### AI-Powered Interactions
 
