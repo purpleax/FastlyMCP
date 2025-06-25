@@ -215,8 +215,6 @@ MIT License - see LICENSE file for details.
 ## Support
 
 - 📚 [Fastly NGWAF Documentation](https://docs.fastly.com/products/web-application-firewall)
-- 🐛 [Report Issues](https://github.com/yourusername/FastlyMCP/issues)
-- 💬 [Discussions](https://github.com/yourusername/FastlyMCP/discussions)
 
 ## Changelog
 
